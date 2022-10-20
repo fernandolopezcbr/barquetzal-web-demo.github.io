@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        body{
+            margin:auto;
+            font-family: -apple-syste, BlinkMacSystemFont, sans-serif;
+            overflow: auto;
+            background: linear-gradient(
+                315deg,
+                rgba(101 , 0 ,94 ,1)3%,
+                rgba(8, 230, 74)38%,
+                rgba(48 , 238 ,226 ,1)68%,
+                rgba(255 , 25 ,25 ,1)98%
+            );
+            animation:  gradient 15s ease infinite;
+            background-size: 400% , 400%;
+            background-attachment: fixed;
+        }
+        @keyframes gradient{
+            0%{
+                background-position: 0% 0%;
+            }
+            50%{
+                background-position: 100% 100%;
+            }
+            100%{
+                background-position: 0% 0%;
+            }
+        } 
+        .wave{
+            background: rgb(255 255 255 / 25%);
+            border-radius: 1000% 1000% 0 0 ;
+            position: fixed;
+            width: 200%;
+            height: 12em;
+            animation: wavw 10s -3s linear infinite;
+            transform: translate3d(0 , 0 , 0);
+            opacity: 0.8;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .wave:nth-of-type(2){
+            bottom: -1.25em;
+            animation: wave 18s linear reverse infinite;
+            opacity: 0.8;
+        }
+        .wave:nth-of-type(3){
+            bottom: -2.25em;
+            animation: wave 20s -1s reverse infinite;
+            opacity: 0.9;
+        }
+
+        @keyframes wave{
+            2%{
+                transform: translateX(1);
+            }
+            25%{
+                transform: translateX(-25%);
+            }
+            50%{
+                transform: translateX(-50%);
+            }
+            75%{
+                transform: translateX(-25%);
+            }
+            100%{
+                transform: translateX(1);
+            }
+        }
+
+        /*
+
+        span{
+            display: block;
+            font-family: monospace;
+            white-space: nowrap;
+            border-right: 4px solid;
+            width: 12ch;
+            
+            animation:typing 2s steps(2),blink .2s
+            infinite step-end alternate;
+            overflow: hidden;
+            
+            
+        }
+
+        @keyframes typing{
+            from {width: 0;}
+        }
+
+        @keyframes blink{
+            50% {border-color: transparent}
+        }
+
+        ETIQUETA HTML <h1 style="text-align: center;"><span>contacto</span></h1>
+
+        */
+
+        /*EFECTO MAQUINA DE ESCRIBIR*/
+        .container-effect-text{
+            width: 100%;
+            height: 100vh;
+            background-color: transparent;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container-effect-text h1{
+            font-size: 40px;
+            font-weight: 200px;
+        }
+        
+        span{
+            color: rgb(5, 5, 5);
+        }
+
+
+        /*SECCION CARDS CONTACTO*/
+        
+.contact-info{
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+
+.card-contact{
+  background: #2f3542;
+  padding: 0 20px;
+  margin: 0 10px;
+  width: calc(33% - 20px);
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  border-radius:15px;
+}
+
+.card-icon{
+  font-size: 28px;
+  background: #ff6348;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px !important;
+  border-radius: 50%;
+  transition: 0.3s linear;
+}
+
+.card-contact:hover .card-icon{
+  background: none;
+  color: #ff6348;
+  transform: scale(1.6);
+}
+
+.card-contact p{
+  margin-top: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  max-height: 0;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+
+.card-contact:hover p{
+  max-height: 40px;
+  opacity: 1;
+}
+
+
+@media screen and (max-width:800px) {
+  .contact-info{
+    flex-direction: column;
+  }
+  .card-contact{
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+  }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Bar El Quetzal</a>
+        <ul class="navigation">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="cocteles.html">Cocteles</a></li>
+            <li><a href="favoritos.html">Mis Favoritos</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+        <div class="search">
+            <input type="search" placeholder="Buscar">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            
+
+        </div>
+    </header>
+    
+    
+
+    
+     <div class="container-effect-text">
+        <h1>Bar el Quetzal <span class="auto-type"></span></h1>
+     </div>
+
+    
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+
+
+        <div class="contact-info">
+            <div class="card-contact">
+              <i class="card-icon far fa-envelope"></i>
+              
+              <a href="mailto:luisfernandolocu@gmail.com?subject=Necesito&nbsp;informacion&body=Me&nbsp;gustaria&nbsp;tener&nbsp;mas&nbsp;informacion">
+                <button style="background: transparent; color: #fff; border-style:none;"><p>luisfernandolocu@gmail.com</p></button>
+              </a>
+              
+            </div>
+      
+            <div class="card-contact">
+              <i class="card-icon fas fa-phone"></i>
+              <a href="tel:+50258133713">
+                <button style="background: transparent; color: #fff; border-style:none;"><p>+502 0000000</p></button>
+              
+              </a>
+              
+              
+            </div>
+      
+            <div class="card-contact">
+              <i class="card-icon fas fa-map-marker-alt"></i>
+              <p>Quetzaltenango, Guatemala</p>
+            </div>
+          </div>
+
+
+        
+
+
+
+        
+    
+
+
+
+
+
+    
+
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed(".auto-type",{
+            strings : ["bebidas", "cocteles", "boquitas", "y mas ..."],
+            typeSpeed: 150,
+            backSpeed: 100,
+            loop: true
+        })
+    </script>
+</body>
+
+</html>
